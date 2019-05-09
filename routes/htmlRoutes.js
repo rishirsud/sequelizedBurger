@@ -1,5 +1,5 @@
 // import our cats model
-const burger = require("../models/burger");
+const Burger = require("../models/");
 
 // export our route definitions as a function
 module.exports = (app) => {
@@ -7,7 +7,7 @@ module.exports = (app) => {
   app.get("/", function(req, res) {
 
     // use cat.findAll
-    burger
+    Burger
       .findAll()
       // if we get to resolve()
       .then(burger_db => {

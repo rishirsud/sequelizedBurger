@@ -2,6 +2,8 @@ const express = require("express");
 const hbs = require("express-handlebars");
 const app = express();
 const PORT = process.env.PORT || 3000;
+const db = require("./models");
+
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -14,6 +16,8 @@ app.set('view engine', 'handlebars');
 require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
 
-app.listen(PORT, function () {
-  console.log(`Listening on PORT: ${PORT}`);
+db.sequelize.sync({force: true}).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
