@@ -8,7 +8,8 @@ module.exports = app => {
   // GET all burgers
   app.get("/api/burger", function (req, res) {
     db.Burger.findAll({}).then(function (dbBurger) {
-      res.json(dbBurger);
+      // res.json(dbBurger);
+      res.render("index");
     });
   });
 
@@ -29,7 +30,8 @@ module.exports = app => {
         id: req.body.id
       }
     }).then(function(dbBurger) {
-      res.json(dbBurger);
+      // res.json(dbBurger);
+      res.redirect("/");
     });
   });
 
@@ -40,7 +42,8 @@ module.exports = app => {
         id: req.params.id
       }
     }).then(function(dbBurger) {
-      res.json(dbBurger);
+      // res.json(dbBurger);
+      res.redirect("/");
     });
   });
 }
