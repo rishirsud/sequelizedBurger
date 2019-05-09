@@ -5,11 +5,16 @@ const db = require("../models");
 
 module.exports = app => {
 
+  // app.get("/", function(req, res) {
+  //   res.redirect("/burger");
+  // });
+
   // GET all burgers
   app.get("/api/burger", function (req, res) {
     db.Burger.findAll({}).then(function (dbBurger) {
-      // res.json(dbBurger);
+      res.locals.burgers = dbBurger;
       res.render("index");
+      // res.json(dbBurger);
     });
   });
 
@@ -18,6 +23,7 @@ module.exports = app => {
       burger_name: req.body.burger_name
     }).then(function (dbBurger) {
       res.json(dbBurger);
+      // res.redirect("/");
     });
   });
 
@@ -30,8 +36,8 @@ module.exports = app => {
         id: req.body.id
       }
     }).then(function(dbBurger) {
-      // res.json(dbBurger);
-      res.redirect("/");
+      res.json(dbBurger);
+      // res.redirect("/");
     });
   });
 
@@ -42,8 +48,8 @@ module.exports = app => {
         id: req.params.id
       }
     }).then(function(dbBurger) {
-      // res.json(dbBurger);
-      res.redirect("/");
+      res.json(dbBurger);
+      // res.redirect("/");
     });
   });
 }
