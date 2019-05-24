@@ -27,7 +27,7 @@ module.exports = app => {
     });
   });
 
-  // PUT/update a cat's sleepy to true/false by id
+  // PUT/update
   app.put("/api/burger/:id", function (req, res) {
     db.Burger.update({
       eaten: req.body.eaten
@@ -41,7 +41,7 @@ module.exports = app => {
     });
   });
 
-  // DELETE a cat by its id
+  // DELETE
   app.delete("/api/burger/:id", function (req, res) {
     db.Burger.destroy({
       where: {
