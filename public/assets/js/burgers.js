@@ -49,7 +49,7 @@ $(document).ready(function() {
       method: "DELETE"
     })
     .then(() => location.reload())
-    .burgerch(err => console.log(err));
+    .catch(err => console.log(err));
   });
 
 });
