@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "300Atrium",
-    "database": "burgers_db",
+    "database": "burgers2_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

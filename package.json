@@ -1,5 +1,5 @@
 {
-  "name": "BurgerApp",
+  "name": "sequelizedburger",
   "version": "1.0.0",
   "description": "* Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.",
   "main": "index.js",
@@ -8,18 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rishirsud/BurgerApp.git"
+    "url": "git+https://github.com/rishirsud/sequelizedBurger.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rishirsud/BurgerApp/issues"
+    "url": "https://github.com/rishirsud/sequelizedBurger/issues"
   },
-  "homepage": "https://github.com/rishirsud/BurgerApp#readme",
+  "homepage": "https://github.com/rishirsud/sequelizedBurger#readme",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.5"
   }
